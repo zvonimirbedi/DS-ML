@@ -11,6 +11,7 @@
 
   <!-- TODO: Add Javascript files here -->
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+  <script src="drawing.js"></script>
 
 </head>
 
@@ -24,12 +25,13 @@
     <h2 id='question'><span id='n1'>3</span> + <span id='n2'>2</span> = </h2>
 
     <!-- TODO: Add a drawing canvas here -->
-    <canvas id='my-canvas'width="300" height="300"></canvas>
+    <canvas id='my-canvas'width="250" height="250"></canvas>
 
   </div>
 
   <div class='container'>
     <button id='checkAnswer' class='btn' value='Check'>Check Answer</button>
+    <button id='clearBoard' class='btn' value='Clear'>Clear Board</button>
   </div>
 
   <!-- TODO: Set up TF model and drawing logic-->
@@ -42,6 +44,19 @@
       const prediction_result = model.predict(myTensor);
       prediction_result.print();
     }
+
+    loadModel();
+    loadCanvac();
+
+    document.getElementById('checkAnswer').addEventListener('click', function (){
+      clearCanvas();
+
+    });
+
+    document.getElementById('clearBoard').addEventListener('click', function (){
+      clearCanvas();
+
+    });
 
   </script>
 
