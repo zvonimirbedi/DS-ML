@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang='en'>
 
 <head>
@@ -10,10 +11,11 @@
   <link rel="icon" href="favicon.png" type="image/gif" sizes="16x16">
 
   <!-- TODO: Add Javascript files here -->
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
   <script src="vendor/opencv.js"></script>
   <script src="processing.js"></script>
   <script src="drawing.js"></script>
+  <script src="maths.js"></script>
 
 </head>
 
@@ -40,10 +42,12 @@
   <script>
     loadModel();
     loadCanvac();
+    nextQuestion();
 
     document.getElementById('checkAnswer').addEventListener('click', function (){
-      predictImage();
+      checkAnswer();
       clearCanvas();
+      nextQuestion();
 
     });
 

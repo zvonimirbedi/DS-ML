@@ -12,7 +12,7 @@ var context;
 
 
 function loadCanvac(){
-  console.log('Loading Canvas');
+  //console.log('Loading Canvas');
   canvas = document.getElementById('my-canvas');
   context = canvas.getContext('2d');
 
@@ -26,14 +26,14 @@ function loadCanvac(){
     var isClickDown = false;
 
   document.addEventListener('mousedown', function (event) {
-    console.log('Click is pressed!');
+    //console.log('Click is pressed!');
     isClickDown = true;
     currentX = event.clientX - canvas.offsetLeft;
     currentY = event.clientY - canvas.offsetTop;
   });
 
   document.addEventListener('mouseup', function (event) {
-    console.log('Click is released!');
+    //console.log('Click is released!');
     isClickDown = false;
 
   });
@@ -60,7 +60,7 @@ function loadCanvac(){
 
   //Touch events
     canvas.addEventListener('touchstart', function (event) {
-      console.log('Touch!');
+      //console.log('Touch!');
       isClickDown = true;
       currentX = event.touches[0].clientX - canvas.offsetLeft;
       currentY = event.touches[0].clientY - canvas.offsetTop;
@@ -68,7 +68,7 @@ function loadCanvac(){
 
 
     document.addEventListener('mouseup', function (event) {
-      console.log('Click is released!');
+      //console.log('Click is released!');
       isClickDown = false;
 
     });
