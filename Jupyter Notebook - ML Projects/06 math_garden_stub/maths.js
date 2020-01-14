@@ -16,7 +16,7 @@ function checkAnswer(){
 
   if (prediction == answer ){
     score++;
-    if (score >=5){
+    if (score <=5){
     document.body.style.backgroundImage = `url('images/astor${score}.png')`;
     }
     else{
