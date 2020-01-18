@@ -1,6 +1,7 @@
 
 var answer;
 var score = 0;
+const ig_url = "https://www.instagram.com/this_is_astor/";
 
 function nextQuestion(){
   const n1 = Math.floor(Math.random() * 10);
@@ -20,9 +21,10 @@ function checkAnswer(){
     document.getElementById("image-id").style.backgroundImage = `url('images/astor${score}.png')`;
     }
     else{
-      alert('Well done! For more images go to Instagram!');
+      alert('Well done! For more images go to Instagram @this_is_astor');
       score = 0;
       document.getElementById("image-id").style.backgroundImage = "none";
+      window.open(ig_url, '_blank');
 
     }
   }
