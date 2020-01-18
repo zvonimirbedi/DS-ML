@@ -22,6 +22,7 @@ function checkAnswer(){
     else{
       alert('Well done! For more images go to Instagram!');
       score = 0;
+      document.getElementById("image-id").style.backgroundImage = "none";
 
     }
   }
