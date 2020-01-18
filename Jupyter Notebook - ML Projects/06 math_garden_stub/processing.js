@@ -29,7 +29,7 @@ function predictImage() {
   else {
     width = 20;
     const scaleFactor = image.cols / width;
-    width = Math.round(image.rows / scaleFactor);
+    height = Math.round(image.rows / scaleFactor);
   }
   let newSize = new cv.Size(width, height);
   cv.resize(image, image, newSize, 0, 0, cv.INTER_AREA);
@@ -40,6 +40,7 @@ function predictImage() {
   const BOTTOM = Math.floor( 4 + ( 20 - height)/2);
 
   let scalor_color_black = new cv.Scalar(0, 0, 0, 0);
+  console.log(`TOP: ${TOP}, BOTTOM: ${BOTTOM}`);
   cv.copyMakeBorder(image, image, TOP, BOTTOM, LEFT, RIGHT, cv.BORDER_CONSTANT, scalor_color_black);
 
   // Center of the mass

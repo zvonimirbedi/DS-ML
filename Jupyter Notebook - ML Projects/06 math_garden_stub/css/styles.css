@@ -36,7 +36,23 @@ h1, h2 {
 
 .container {
   text-align: center;
-  margin: 50px auto;
+  margin: 20px 0px 0px 0px;
+}
+.buttons {
+  text-align: center;
+}
+.images {
+  min-height: 400px;
+  height: 100%;
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media only screen {
+  .images {
+  min-height: 600px;
+}
 }
 
 .btn {

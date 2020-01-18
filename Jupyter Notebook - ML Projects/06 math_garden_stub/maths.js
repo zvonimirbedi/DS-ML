@@ -17,7 +17,7 @@ function checkAnswer(){
   if (prediction == answer ){
     score++;
     if (score <=5){
-    document.body.style.backgroundImage = `url('images/astor${score}.png')`;
+    document.getElementById("image-id").style.backgroundImage = `url('images/astor${score}.png')`;
     }
     else{
       alert('Well done! For more images go to Instagram!');
@@ -26,12 +26,13 @@ function checkAnswer(){
     }
   }
   else{
-    if (score>0){
-      score--;
-      if(score!=0){
-      document.body.style.backgroundImage = `url('images/astor${score}.png')`;
+      alert('Check your calculations and write neater!');
+      if (score>0){
+        score--;
+      document.getElementById("image-id").style.backgroundImage = `url('images/astor${score}.png')`;
+      if(score<=0){
+      document.getElementById("image-id").style.backgroundImage = "none";
     }
-        alert('Check your calculations and write neater!');
 
     }
   }
